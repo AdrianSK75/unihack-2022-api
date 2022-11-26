@@ -1,0 +1,214 @@
+[debug] [2022-11-26T09:52:25.514Z] ----------------------------------------------------------------------
+[debug] [2022-11-26T09:52:25.517Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Adrian\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-11-26T09:52:25.517Z] CLI Version:   11.16.1
+[debug] [2022-11-26T09:52:25.517Z] Platform:      win32
+[debug] [2022-11-26T09:52:25.517Z] Node Version:  v16.17.0
+[debug] [2022-11-26T09:52:25.519Z] Time:          Sat Nov 26 2022 11:52:25 GMT+0200 (Eastern European Standard Time)
+[debug] [2022-11-26T09:52:25.519Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-11-26T09:52:25.526Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-11-26T09:52:25.527Z] > authorizing via signed-in user (adrianstanciudev@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Adrian\Desktop\expressts\node-express-typescript
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-11-26T09:53:52.936Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2022-11-26T09:53:53.838Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2022-11-26T09:53:53.838Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project unihack-2022 (Unihack-2022) 
+[info] 
+=== Database Setup
+[info] i  database: ensuring required API firebasedatabase.googleapis.com is enabled... 
+[debug] [2022-11-26T09:53:57.372Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/unihack-2022/services/firebasedatabase.googleapis.com [none]
+[debug] [2022-11-26T09:53:57.372Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/unihack-2022/services/firebasedatabase.googleapis.com x-goog-quota-user=projects/unihack-2022
+[debug] [2022-11-26T09:53:58.733Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/unihack-2022/services/firebasedatabase.googleapis.com 200
+[debug] [2022-11-26T09:53:58.733Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/unihack-2022/services/firebasedatabase.googleapis.com [omitted]
+[warn] !  database: missing required API firebasedatabase.googleapis.com. Enabling now... 
+[debug] [2022-11-26T09:53:58.735Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/unihack-2022/services/firebasedatabase.googleapis.com:enable [none]
+[debug] [2022-11-26T09:53:58.736Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/unihack-2022/services/firebasedatabase.googleapis.com:enable x-goog-quota-user=projects/unihack-2022
+[debug] [2022-11-26T09:54:00.477Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/unihack-2022/services/firebasedatabase.googleapis.com:enable 200
+[debug] [2022-11-26T09:54:00.477Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/unihack-2022/services/firebasedatabase.googleapis.com:enable [omitted]
+[debug] [2022-11-26T09:54:10.484Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/unihack-2022/services/firebasedatabase.googleapis.com [none]
+[debug] [2022-11-26T09:54:10.484Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/unihack-2022/services/firebasedatabase.googleapis.com x-goog-quota-user=projects/unihack-2022
+[debug] [2022-11-26T09:54:11.845Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/unihack-2022/services/firebasedatabase.googleapis.com 200
+[debug] [2022-11-26T09:54:11.846Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/unihack-2022/services/firebasedatabase.googleapis.com [omitted]
+[info] +  database: required API firebasedatabase.googleapis.com is enabled 
+[info] 
+[debug] [2022-11-26T09:54:11.853Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/unihack-2022 [none]
+[debug] [2022-11-26T09:54:12.355Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/unihack-2022 200
+[debug] [2022-11-26T09:54:12.355Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/unihack-2022 {"projectId":"unihack-2022","projectNumber":"684462232584","displayName":"Unihack-2022","name":"projects/unihack-2022","resources":{"hostingSite":"unihack-2022","storageBucket":"unihack-2022.appspot.com","locationId":"europe-west"},"state":"ACTIVE","etag":"1_f58c3494-eb8b-487e-a565-0d0a5a5a7b14"}
+[debug] [2022-11-26T09:54:23.575Z] >>> [apiv2][query] POST https://firebasedatabase.googleapis.com/v1beta/projects/unihack-2022/locations/europe-west1/instances databaseId=unihack-2022-default-rtdb&validateOnly=true
+[debug] [2022-11-26T09:54:23.575Z] >>> [apiv2][body] POST https://firebasedatabase.googleapis.com/v1beta/projects/unihack-2022/locations/europe-west1/instances {"type":"default_database"}
+[debug] [2022-11-26T09:54:24.848Z] <<< [apiv2][status] POST https://firebasedatabase.googleapis.com/v1beta/projects/unihack-2022/locations/europe-west1/instances 200
+[debug] [2022-11-26T09:54:24.849Z] <<< [apiv2][body] POST https://firebasedatabase.googleapis.com/v1beta/projects/unihack-2022/locations/europe-west1/instances {"name":"projects/684462232584/locations/europe-west1/instances/unihack-2022-default-rtdb","project":"projects/684462232584","databaseUrl":"https://unihack-2022-default-rtdb.europe-west1.firebasedatabase.app","type":"DEFAULT_DATABASE","state":"ACTIVE"}
+[debug] [2022-11-26T09:54:24.852Z] >>> [apiv2][query] POST https://firebasedatabase.googleapis.com/v1beta/projects/unihack-2022/locations/europe-west1/instances databaseId=unihack-2022-default-rtdb
+[debug] [2022-11-26T09:54:24.852Z] >>> [apiv2][body] POST https://firebasedatabase.googleapis.com/v1beta/projects/unihack-2022/locations/europe-west1/instances {"type":"default_database"}
+[debug] [2022-11-26T09:54:26.182Z] <<< [apiv2][status] POST https://firebasedatabase.googleapis.com/v1beta/projects/unihack-2022/locations/europe-west1/instances 200
+[debug] [2022-11-26T09:54:26.182Z] <<< [apiv2][body] POST https://firebasedatabase.googleapis.com/v1beta/projects/unihack-2022/locations/europe-west1/instances {"name":"projects/684462232584/locations/europe-west1/instances/unihack-2022-default-rtdb","project":"projects/684462232584","databaseUrl":"https://unihack-2022-default-rtdb.europe-west1.firebasedatabase.app","type":"DEFAULT_DATABASE","state":"ACTIVE"}
+[info] 
+[info] Firebase Realtime Database Security Rules allow you to define how your data should be
+[info] structured and when your data can be read from and written to.
+[info] 
+[debug] [2022-11-26T09:55:14.287Z] >>> [apiv2][query] GET https://unihack-2022-default-rtdb.europe-west1.firebasedatabase.app/.settings/rules.json [none]
+[debug] [2022-11-26T09:55:15.842Z] <<< [apiv2][status] GET https://unihack-2022-default-rtdb.europe-west1.firebasedatabase.app/.settings/rules.json 200
+[debug] [2022-11-26T09:55:15.842Z] <<< [apiv2][body] GET https://unihack-2022-default-rtdb.europe-west1.firebasedatabase.app/.settings/rules.json [stream]
+[info] +  Database Rules for unihack-2022-default-rtdb have been written to database.rules.json. 
+[info] Future modifications to database.rules.json will update Realtime Database Security Rules when you run
+[info] firebase deploy.
+[info] 
+=== Firestore Setup
+[debug] [2022-11-26T09:55:15.849Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/unihack-2022/services/firestore.googleapis.com [none]
+[debug] [2022-11-26T09:55:15.850Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/unihack-2022/services/firestore.googleapis.com x-goog-quota-user=projects/unihack-2022
+[debug] [2022-11-26T09:55:16.948Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/unihack-2022/services/firestore.googleapis.com 200
+[debug] [2022-11-26T09:55:16.948Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/unihack-2022/services/firestore.googleapis.com [omitted]
+[debug] [2022-11-26T09:55:16.949Z] >>> [apiv2][query] GET https://appengine.googleapis.com/v1/apps/unihack-2022 [none]
+[debug] [2022-11-26T09:55:17.481Z] <<< [apiv2][status] GET https://appengine.googleapis.com/v1/apps/unihack-2022 200
+[debug] [2022-11-26T09:55:17.481Z] <<< [apiv2][body] GET https://appengine.googleapis.com/v1/apps/unihack-2022 {"name":"apps/unihack-2022","id":"unihack-2022","authDomain":"gmail.com","locationId":"europe-west","codeBucket":"staging.unihack-2022.appspot.com","servingStatus":"SERVING","defaultHostname":"unihack-2022.ew.r.appspot.com","defaultBucket":"unihack-2022.appspot.com","serviceAccount":"unihack-2022@appspot.gserviceaccount.com","gcrDomain":"eu.gcr.io","databaseType":"CLOUD_FIRESTORE","featureSettings":{"splitHealthChecks":true,"useContainerOptimizedOs":true}}
+[debug] [2022-11-26T09:55:17.482Z] database_type: CLOUD_FIRESTORE
+[debug] [2022-11-26T09:55:17.482Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-11-26T09:55:17.482Z] > authorizing via signed-in user (adrianstanciudev@gmail.com)
+[debug] [2022-11-26T09:55:17.483Z] [iam] checking project unihack-2022 for permissions ["firebase.projects.get"]
+[debug] [2022-11-26T09:55:17.483Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/unihack-2022:testIamPermissions [none]
+[debug] [2022-11-26T09:55:17.483Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/unihack-2022:testIamPermissions x-goog-quota-user=projects/unihack-2022
+[debug] [2022-11-26T09:55:17.483Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/unihack-2022:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2022-11-26T09:55:18.505Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/unihack-2022:testIamPermissions 200
+[debug] [2022-11-26T09:55:18.505Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/unihack-2022:testIamPermissions {"permissions":["firebase.projects.get"]}
+[info] 
+[info] Firestore Security Rules allow you to define how and when to allow
+[info] requests. You can keep these rules in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2022-11-26T09:55:21.479Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/unihack-2022/releases pageSize=10&pageToken=
+[debug] [2022-11-26T09:55:22.194Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/unihack-2022/releases 200
+[debug] [2022-11-26T09:55:22.194Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/unihack-2022/releases {"releases":[{"name":"projects/unihack-2022/releases/cloud.firestore","rulesetName":"projects/unihack-2022/rulesets/83bd8b62-ee38-42c6-a66d-f3d6f04fd625","createTime":"2022-11-26T09:20:19.432338Z","updateTime":"2022-11-26T09:20:19.432338Z"},{"name":"projects/unihack-2022/releases/firebase.storage/unihack-2022.appspot.com","rulesetName":"projects/unihack-2022/rulesets/0dc16238-5dad-4113-b1dd-41b32270ce19","createTime":"2022-11-26T09:23:51.446604Z","updateTime":"2022-11-26T09:23:51.446604Z"}]}
+[debug] [2022-11-26T09:55:22.195Z] Found ruleset: projects/unihack-2022/rulesets/83bd8b62-ee38-42c6-a66d-f3d6f04fd625
+[debug] [2022-11-26T09:55:22.196Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/unihack-2022/rulesets/83bd8b62-ee38-42c6-a66d-f3d6f04fd625 [none]
+[debug] [2022-11-26T09:55:23.133Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/unihack-2022/rulesets/83bd8b62-ee38-42c6-a66d-f3d6f04fd625 200
+[debug] [2022-11-26T09:55:23.134Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/unihack-2022/rulesets/83bd8b62-ee38-42c6-a66d-f3d6f04fd625 [omitted]
+[info] 
+[info] Firestore indexes allow you to perform complex queries while
+[info] maintaining performance that scales with the size of the result
+[info] set. You can keep index definitions in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2022-11-26T09:55:25.039Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/unihack-2022/databases/(default)/collectionGroups/-/indexes [none]
+[debug] [2022-11-26T09:55:25.042Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/unihack-2022/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false [none]
+[debug] [2022-11-26T09:55:25.675Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/unihack-2022/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false 200
+[debug] [2022-11-26T09:55:25.676Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/unihack-2022/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false {"fields":[{"name":"projects/unihack-2022/databases/(default)/collectionGroups/__default__/fields/*","indexConfig":{"indexes":[{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"ASCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"DESCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","arrayConfig":"CONTAINS"}],"state":"READY"}]}}]}
+[debug] [2022-11-26T09:55:25.678Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/unihack-2022/databases/(default)/collectionGroups/-/indexes 200
+[debug] [2022-11-26T09:55:25.678Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/unihack-2022/databases/(default)/collectionGroups/-/indexes {}
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2022-11-26T09:55:44.394Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2022-11-26T09:55:44.822Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2022-11-26T09:55:44.822Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"9.14.0","browserURL":"https://www.gstatic.com/firebasejs/9.14.0/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/9.14.0/firebase.tgz"},"live":{"version":"9.14","browserURL":"https://www.gstatic.com/firebasejs/live/9.14/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/9.14/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/9.14.0/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/9.14.0/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/9.14.0/firebase-auth/cordova.js","auth/react-native":"https://www.gstatic.com/firebasejs/9.14.0/firebase-auth/react-native.js","functions":"https://www.gstatic.com/firebasejs/9.14.0/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore/lite.js","installations":"https://www.gstatic.com/firebasejs/9.14.0/firebase-installations.js","storage":"https://www.gstatic.com/firebasejs/9.14.0/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/9.14.0/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/9.14.0/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/9.14.0/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/9.14.0/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/9.14.0/firebase-database.js","firestore.memory":"https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.memory.js"}}
+[info] +  Wrote public/index.html 
+[info] 
+[info] i  Didn't detect a .git folder. Assuming C:\Users\Adrian\Desktop\expressts\node-express-typescript is the project root. 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=174732322&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2022-11-26T09:56:28.507Z] >>> [apiv2][query] POST https://github.com/login/oauth/access_token [none]
+[debug] [2022-11-26T09:56:28.508Z] >>> [apiv2][body] POST https://github.com/login/oauth/access_token [stream]
+[debug] [2022-11-26T09:56:29.165Z] <<< [apiv2][status] POST https://github.com/login/oauth/access_token 200
+[debug] [2022-11-26T09:56:29.165Z] <<< [apiv2][body] POST https://github.com/login/oauth/access_token {"access_token":"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","token_type":"bearer","scope":"read:user,repo"}
+[debug] [2022-11-26T09:56:29.182Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2022-11-26T09:56:29.887Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2022-11-26T09:56:29.888Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"AdrianSK75","id":56803219,"node_id":"MDQ6VXNlcjU2ODAzMjE5","avatar_url":"https://avatars.githubusercontent.com/u/56803219?v=4","gravatar_id":"","url":"https://api.github.com/users/AdrianSK75","html_url":"https://github.com/AdrianSK75","followers_url":"https://api.github.com/users/AdrianSK75/followers","following_url":"https://api.github.com/users/AdrianSK75/following{/other_user}","gists_url":"https://api.github.com/users/AdrianSK75/gists{/gist_id}","starred_url":"https://api.github.com/users/AdrianSK75/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/AdrianSK75/subscriptions","organizations_url":"https://api.github.com/users/AdrianSK75/orgs","repos_url":"https://api.github.com/users/AdrianSK75/repos","events_url":"https://api.github.com/users/AdrianSK75/events{/privacy}","received_events_url":"https://api.github.com/users/AdrianSK75/received_events","type":"User","site_admin":false,"name":"AdrianSK","company":null,"blog":"https://www.linkedin.com/in/stanciu-adrian/","location":null,"email":null,"hireable":null,"bio":"🐱‍🏍Full Stack Engineer -\r\nFocused to write clean code","twitter_username":null,"public_repos":22,"public_gists":0,"followers":19,"following":75,"created_at":"2019-10-20T20:13:05Z","updated_at":"2022-10-24T07:25:47Z","private_gists":0,"total_private_repos":4,"owned_private_repos":4,"disk_usage":47408,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] +  Success! Logged into GitHub as AdrianSK75 
+[info] 
+[debug] [2022-11-26T09:57:28.426Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-11-26T09:57:28.969Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-11-26T09:57:28.969Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-11-26T09:57:58.948Z] >>> [apiv2][query] GET https://api.github.com/repos/git@github.com:Tudor036/unihack-2022-api.git/actions/secrets/public-key type=owner
+[debug] [2022-11-26T09:57:59.493Z] <<< [apiv2][status] GET https://api.github.com/repos/git@github.com:Tudor036/unihack-2022-api.git/actions/secrets/public-key 404
+[debug] [2022-11-26T09:57:59.494Z] <<< [apiv2][body] GET https://api.github.com/repos/git@github.com:Tudor036/unihack-2022-api.git/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-11-26T09:58:00.463Z] >>> [apiv2][query] GET https://api.github.com/repos/git@github.com:Tudor036/unihack-2022-api.git/actions/secrets/public-key type=owner
+[debug] [2022-11-26T09:58:00.918Z] <<< [apiv2][status] GET https://api.github.com/repos/git@github.com:Tudor036/unihack-2022-api.git/actions/secrets/public-key 404
+[debug] [2022-11-26T09:58:00.918Z] <<< [apiv2][body] GET https://api.github.com/repos/git@github.com:Tudor036/unihack-2022-api.git/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-11-26T09:58:13.101Z] >>> [apiv2][query] GET https://api.github.com/repos/git@github.com:Tudor036/unihack-2022-api.git/actions/secrets/public-key type=owner
+[debug] [2022-11-26T09:58:13.716Z] <<< [apiv2][status] GET https://api.github.com/repos/git@github.com:Tudor036/unihack-2022-api.git/actions/secrets/public-key 404
+[debug] [2022-11-26T09:58:13.716Z] <<< [apiv2][body] GET https://api.github.com/repos/git@github.com:Tudor036/unihack-2022-api.git/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-11-26T09:58:13.921Z] >>> [apiv2][query] GET https://api.github.com/repos/git@github.com:Tudor036/unihack-2022-api.git/actions/secrets/public-key type=owner
+[debug] [2022-11-26T09:58:14.333Z] <<< [apiv2][status] GET https://api.github.com/repos/git@github.com:Tudor036/unihack-2022-api.git/actions/secrets/public-key 404
+[debug] [2022-11-26T09:58:14.334Z] <<< [apiv2][body] GET https://api.github.com/repos/git@github.com:Tudor036/unihack-2022-api.git/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-11-26T09:58:14.892Z] >>> [apiv2][query] GET https://api.github.com/repos/git@github.com:Tudor036/unihack-2022-api.git/actions/secrets/public-key type=owner
+[debug] [2022-11-26T09:58:15.307Z] <<< [apiv2][status] GET https://api.github.com/repos/git@github.com:Tudor036/unihack-2022-api.git/actions/secrets/public-key 404
+[debug] [2022-11-26T09:58:15.307Z] <<< [apiv2][body] GET https://api.github.com/repos/git@github.com:Tudor036/unihack-2022-api.git/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-11-26T09:58:15.666Z] >>> [apiv2][query] GET https://api.github.com/repos/git@github.com:Tudor036/unihack-2022-api.git/actions/secrets/public-key type=owner
+[debug] [2022-11-26T09:58:16.378Z] <<< [apiv2][status] GET https://api.github.com/repos/git@github.com:Tudor036/unihack-2022-api.git/actions/secrets/public-key 404
+[debug] [2022-11-26T09:58:16.378Z] <<< [apiv2][body] GET https://api.github.com/repos/git@github.com:Tudor036/unihack-2022-api.git/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-11-26T09:58:16.448Z] >>> [apiv2][query] GET https://api.github.com/repos/git@github.com:Tudor036/unihack-2022-api.git/actions/secrets/public-key type=owner
+[debug] [2022-11-26T09:58:16.892Z] <<< [apiv2][status] GET https://api.github.com/repos/git@github.com:Tudor036/unihack-2022-api.git/actions/secrets/public-key 404
+[debug] [2022-11-26T09:58:16.892Z] <<< [apiv2][body] GET https://api.github.com/repos/git@github.com:Tudor036/unihack-2022-api.git/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-11-26T09:58:31.267Z] >>> [apiv2][query] GET https://api.github.com/repos/Tudor036/unihack-2022-api.git/actions/secrets/public-key type=owner
+[debug] [2022-11-26T09:58:31.943Z] <<< [apiv2][status] GET https://api.github.com/repos/Tudor036/unihack-2022-api.git/actions/secrets/public-key 404
+[debug] [2022-11-26T09:58:31.943Z] <<< [apiv2][body] GET https://api.github.com/repos/Tudor036/unihack-2022-api.git/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-11-26T09:58:33.956Z] >>> [apiv2][query] GET https://api.github.com/repos/Tudor036/unihack-2022-api.git/actions/secrets/public-key type=owner
+[debug] [2022-11-26T09:58:34.617Z] <<< [apiv2][status] GET https://api.github.com/repos/Tudor036/unihack-2022-api.git/actions/secrets/public-key 404
+[debug] [2022-11-26T09:58:34.618Z] <<< [apiv2][body] GET https://api.github.com/repos/Tudor036/unihack-2022-api.git/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-11-26T09:58:43.294Z] >>> [apiv2][query] GET https://api.github.com/repos/Tudor036/unihack-2022-api.git/actions/secrets/public-key type=owner
+[debug] [2022-11-26T09:58:43.732Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-11-26T09:58:43.736Z] <<< [apiv2][status] GET https://api.github.com/repos/Tudor036/unihack-2022-api.git/actions/secrets/public-key 404
+[debug] [2022-11-26T09:58:43.736Z] <<< [apiv2][body] GET https://api.github.com/repos/Tudor036/unihack-2022-api.git/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-11-26T09:58:44.130Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-11-26T09:58:44.131Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-11-26T09:58:44.150Z] >>> [apiv2][query] GET https://api.github.com/repos/Tudor036/unihack-2022-api.git/actions/secrets/public-key type=owner
+[debug] [2022-11-26T09:58:44.355Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-11-26T09:58:44.507Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-11-26T09:58:44.538Z] <<< [apiv2][status] GET https://api.github.com/repos/Tudor036/unihack-2022-api.git/actions/secrets/public-key 404
+[debug] [2022-11-26T09:58:44.538Z] <<< [apiv2][body] GET https://api.github.com/repos/Tudor036/unihack-2022-api.git/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-11-26T09:58:44.663Z] >>> [apiv2][query] GET https://api.github.com/repos/Tudor036/unihack-2022-api.git/actions/secrets/public-key type=owner
+[debug] [2022-11-26T09:58:44.751Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-11-26T09:58:44.751Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-11-26T09:58:44.821Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-11-26T09:58:44.949Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-11-26T09:58:44.949Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-11-26T09:58:45.058Z] <<< [apiv2][status] GET https://api.github.com/repos/Tudor036/unihack-2022-api.git/actions/secrets/public-key 404
+[debug] [2022-11-26T09:58:45.058Z] <<< [apiv2][body] GET https://api.github.com/repos/Tudor036/unihack-2022-api.git/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-11-26T09:58:45.359Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-11-26T09:58:45.360Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-11-26T09:58:45.808Z] >>> [apiv2][query] GET https://api.github.com/repos/Tudor036/unihack-2022-api.git/actions/secrets/public-key type=owner
+[debug] [2022-11-26T09:58:46.371Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-11-26T09:58:46.488Z] <<< [apiv2][status] GET https://api.github.com/repos/Tudor036/unihack-2022-api.git/actions/secrets/public-key 404
+[debug] [2022-11-26T09:58:46.488Z] <<< [apiv2][body] GET https://api.github.com/repos/Tudor036/unihack-2022-api.git/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-11-26T09:58:46.577Z] >>> [apiv2][query] GET https://api.github.com/repos/Tudor036/unihack-2022-api.git/actions/secrets/public-key type=owner
+[debug] [2022-11-26T09:58:46.770Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-11-26T09:58:46.788Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-11-26T09:58:46.788Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-11-26T09:58:46.946Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-11-26T09:58:47.099Z] <<< [apiv2][status] GET https://api.github.com/repos/Tudor036/unihack-2022-api.git/actions/secrets/public-key 404
+[debug] [2022-11-26T09:58:47.099Z] <<< [apiv2][body] GET https://api.github.com/repos/Tudor036/unihack-2022-api.git/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-11-26T09:58:47.110Z] >>> [apiv2][query] GET https://api.github.com/repos/Tudor036/unihack-2022-api.git/actions/secrets/public-key type=owner
+[debug] [2022-11-26T09:58:47.210Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-11-26T09:58:47.211Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-11-26T09:58:47.284Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-11-26T09:58:47.406Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-11-26T09:58:47.406Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-11-26T09:58:47.515Z] <<< [apiv2][status] GET https://api.github.com/repos/Tudor036/unihack-2022-api.git/actions/secrets/public-key 404
+[debug] [2022-11-26T09:58:47.515Z] <<< [apiv2][body] GET https://api.github.com/repos/Tudor036/unihack-2022-api.git/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-11-26T09:58:47.713Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-11-26T09:58:47.713Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}

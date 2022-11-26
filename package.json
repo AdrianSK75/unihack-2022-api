@@ -4,11 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "rimraf dist && tsc",
-    "preserve": "npm run build",
-    "serve": "cross-env NODE_ENV=development concurrently \"tsc --watch\" \"nodemon -q dist/index.js\"",
-    "prestart": "npm run build",
-    "start": "cross-env NODE_ENV=production node dist/index.js",
+    "start": "ts-node ./server.ts",
+    "dev": "ts-node-dev ./server.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -23,11 +20,15 @@
     "express": "^4.18.2",
     "firebase": "^9.14.0",
     "helmet": "^6.0.0",
+    "morgan": "^1.10.0",
     "rimraf": "^3.0.2",
     "typescript": "^4.9.3"
   },
   "devDependencies": {
+    "@types/morgan": "^1.9.3",
     "concurrently": "^7.6.0",
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0"
   }
 }

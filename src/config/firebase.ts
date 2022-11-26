@@ -1,17 +1,19 @@
-import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
+import * as admin from "firebase-admin/app";
+import { getFirestore } from "firebase-admin/firestore";
+import { getAuth } from "firebase-admin/auth";
 
-const firebaseConfig = {
-    apiKey: "AIzaSyCd40JtbDghOKrYiaW2ZFk6xD4HOFFyQ-o",
-    authDomain: "unihack-2022.firebaseapp.com",
-    projectId: "unihack-2022",
-    storageBucket: "unihack-2022.appspot.com",
-    messagingSenderId: "684462232584",
-    appId: "1:684462232584:web:a1be4e4ac3a4d09e4aedbd",
-    measurementId: "G-G7WZSRD55X"
-};
+import serviceAccount from "../../serviceAccountKey.json";
 
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
+admin.initializeApp({
+    // credential: admin.cert({
+        //     projectId: process.env.PROJECT_ID,
+        //     clientEmail: process.env.CLIENT_EMAIL,
+        //     privateKey: process.env.PRIVATE_KEY
+        // }),
+    // @ts-ignore
+    credential: admin.cert(serviceAccount),
+    databaseURL: "https://unihack-2022-default-rtdb.europe-west1.firebasedatabase.app"
+});
 
-export { db }; 
+export const db = getFirestore();
+export const auth = getAuth();

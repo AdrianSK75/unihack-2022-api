@@ -2,20 +2,31 @@ import express, { Express, Request, Response } from 'express';
 import bodyParser from 'body-parser';
 import helmet from 'helmet';
 import morgan from 'morgan';
+import csurf from 'csurf';
+import cookieParser from 'cookie-parser';
 
 const app: Express = express();
 
-import indexRouter from './routes/index';
-import businessesRouter from './routes/businesses';
-import projectsRouter from './routes/projects';
-import tripsRouter from './routes/trips';
-import usersRouter from './routes/users';
+import indexRouter from './routes/index.routes';
+import businessesRouter from './routes/businesses.routes';
+import projectsRouter from './routes/projects.routes';
+import tripsRouter from './routes/trips.routes';
+import usersRouter from './routes/users.routes';
 
-app.use(helmet());
-app.use(morgan('dev'));
+import { csrfTokenMiddleware } from './middleware/csrf.middleware';
+import { authMiddleware } from './middleware/auth.middleware';
+
+const csurfProtection = csurf({ cookie: true })
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cookieParser());
+app.use(morgan('dev'));
+app.use(csurfProtection);
+app.use(helmet());
 
+app.all('*', csrfTokenMiddleware);
+app.all('*', authMiddleware);
 
 app.use('/business', businessesRouter);
 app.use('/project', projectsRouter);

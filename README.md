@@ -17,3 +17,5 @@ Otherwise, to start the API, just run
 ```
 npm start
 ```
+
+Our Api is considered a SaaS, which targets the private health eviroment concerned institutions.

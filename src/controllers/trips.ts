@@ -8,11 +8,11 @@ export const getTrip = (req: Request, res: Response) => {
     
 }
 
-export const postTrip = (req: Request, res: Response) => {
+export const createTrip = (req: Request, res: Response) => {
 
 }
 
-export const putTrip = (req: Request, res: Response) => {
+export const updateTrip = (req: Request, res: Response) => {
     
 }
 

@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
-import { DataProperties } from "../models/Business.model";
+import BusinessDataProperties from "../models/Business.model";
 import { createOneBusiness, deleteOneBusiness, fetchOneBusiness, updateOneBusiness } from "../service/business.service";
-import { fetchBusinesses } from "../utils/firebase.utils";
+import { createBusiness, deleteBusiness, fetchBusiness, fetchBusinesses, updateBusiness } from "../utils/firebase.utils";
 
 export const getBusinesses = async (req: Request, res: Response) => {
     let businesses;
@@ -14,14 +14,18 @@ export const getBusinesses = async (req: Request, res: Response) => {
             message: "Internal Server Error"
         })
     }
-    res.send(businesses);
+    res.status(200).json({
+        status: "success",
+        message: "Businesses fetched succesfully",
+        data: businesses
+    });
 }
 
 export const getBusiness = async (req: Request, res: Response) => {
     const businessId = req.params.businessId;
     let searchedBusiness;
     try {
-        searchedBusiness = await fetchOneBusiness(businessId);
+        searchedBusiness = await fetchBusiness(businessId);
     } catch(err: any) {
         console.error(err);
         res.status(500).json({
@@ -29,14 +33,19 @@ export const getBusiness = async (req: Request, res: Response) => {
             message: "Internal Server Error"
         })
     }
-    res.status(200).json(searchedBusiness);
+    res.status(200).json({
+        status: "success",
+        message: "Business fetched succesfully",
+        data: searchedBusiness
+    });
 }
 
-export const createBusiness = async (req: Request, res: Response) => {
-    const data: DataProperties = req.body;
+export const postBusiness = async (req: Request, res: Response) => {
+    const data: BusinessDataProperties = req.body;
     let newBusiness;
     try {
-        newBusiness = await createOneBusiness(data);
+        newBusiness = await createBusiness(data);
+        console.log(newBusiness);
     } catch(err) {
         console.error(err);
         res.status(500).json({
@@ -46,15 +55,16 @@ export const createBusiness = async (req: Request, res: Response) => {
     }
     res.status(201).json({
         status: "success",
-        message: "Document updated succesfully!"
+        message: "Business created succesfully!",
+        data: []
     });
 }
 
-export const updateBusiness = async (req: Request, res: Response) => {
+export const putBusiness = async (req: Request, res: Response) => {
     const businessId = req.params.businessId;
     const newData = req.body;
     try {
-        await updateOneBusiness(businessId, newData);
+        await updateBusiness(businessId, newData);
     } catch(err: any) {
         console.log(err);
         res.status(400).json({
@@ -64,14 +74,15 @@ export const updateBusiness = async (req: Request, res: Response) => {
     }
     res.status(204).json({
         status: "success",
-        message: "Document updated succesfully!"
+        message: "Business updated succesfully!",
+        data: []
     });
 };
 
-export const deleteBusiness = async (req: Request, res: Response) => {
+export const delBusiness = async (req: Request, res: Response) => {
     const businessId = req.params.businessId;
     try {
-        await deleteOneBusiness(businessId);
+        await deleteBusiness(businessId);
     } catch(err) {
         console.error(err);
         res.status(500).json({
@@ -82,6 +93,7 @@ export const deleteBusiness = async (req: Request, res: Response) => {
 
     res.status(210).json({
         status: "success",
-        message: "Document deleted succesfully!"
+        message: "Business deleted succesfully!",
+        data: []
     });;
 };

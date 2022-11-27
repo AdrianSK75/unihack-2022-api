@@ -1,13 +1,9 @@
 import express from "express";
-import { getRecognition } from "../controllers/ai.controller";
+import { getRecognition, postRecognition } from "../controllers/ai.controller";
 const AiRouter = express.Router();
 
 AiRouter
-    .get('/ai/recognise', () => {
-
-    })
-    .post('/ai/recognise', () => {
-
-    });
+    .get('/recognise', getRecognition)
+    .post('/recognise', postRecognition);
 
 export default AiRouter;

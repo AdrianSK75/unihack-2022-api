@@ -23,7 +23,6 @@ app.use(cookieParser());
 app.use(morgan('dev'));
 // app.use(csurfProtection);
 app.use(helmet());
-<<<<<<< HEAD
 
 // app.all('*', csrfTokenMiddleware);
 // app.all('*', authMiddleware);
@@ -32,7 +31,6 @@ app.use('/business', businessesRouter);
 app.use('/project', projectsRouter);
 app.use('/trip', tripsRouter);
 app.use('/user', usersRouter);
-=======
 
 // app.all('*', csrfTokenMiddleware);
 // app.all('*', authMiddleware);
@@ -48,6 +46,5 @@ app.get('*', (req: Request, res: Response) => {
             "message": "not found"
         })
     })
->>>>>>> 1b0cc556908655d5affe26aba6e6450448e3b32e
 
 export default app;

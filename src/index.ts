@@ -7,7 +7,6 @@ import cookieParser from 'cookie-parser';
 
 const app: Express = express();
 
-import indexRouter from './routes/index.routes';
 import businessesRouter from './routes/businesses.routes';
 import projectsRouter from './routes/projects.routes';
 import tripsRouter from './routes/trips.routes';
@@ -22,16 +21,22 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(morgan('dev'));
-app.use(csurfProtection);
+// app.use(csurfProtection);
 app.use(helmet());
 
-app.all('*', csrfTokenMiddleware);
-app.all('*', authMiddleware);
+// app.all('*', csrfTokenMiddleware);
+// app.all('*', authMiddleware);
 
-app.use('/business', businessesRouter);
-app.use('/project', projectsRouter);
-app.use('/trip', tripsRouter);
-app.use('/user', usersRouter);
-app.use('/', indexRouter);
+app.use('/businesses', businessesRouter);
+app.use('/projects', projectsRouter);
+app.use('/trips', tripsRouter);
+app.use('/users', usersRouter);
+
+app.get('*', (req: Request, res: Response) => {
+        res.json({
+            "status": "404",
+            "message": "not found"
+        })
+    })
 
 export default app;
